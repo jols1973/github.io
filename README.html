@@ -1,0 +1,19 @@
+<h2>Enviar Prompt</h2>
+<form id="promptForm">
+  <label for="prompt">Escribe tu prompt:</label><br>
+  <textarea id="prompt" name="prompt" rows="4" cols="50"></textarea><br><br>
+  <button type="submit">Enviar</button>
+</form>
+
+<div id="respuesta"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("promptForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const prompt = document.getElementById("prompt").value;
+      document.getElementById("respuesta").innerHTML =
+        "<h3>Prompt recibido:</h3><p>" + prompt + "</p>";
+    });
+  });
+</script>
